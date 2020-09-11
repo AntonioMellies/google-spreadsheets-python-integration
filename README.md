@@ -1,4 +1,4 @@
-# GOOGLE SHEETS PYTHON INTEGRATION
+# GOOGLE SPREADSHEETS PYTHON INTEGRATION
 
 Basic example of integration of google spreadsheets
 
@@ -28,7 +28,7 @@ pip install -r requirements.txt
 - Download of the credential (json file)
 
 
-### Share spreedsheet
+### Share spreadsheet
 - Share the spreadsheet with the email contained in the credentials file (client_email)
 
 ### Create .env file
