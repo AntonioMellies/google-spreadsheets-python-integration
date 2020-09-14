@@ -127,3 +127,6 @@ dmypy.json
 
 # Google Credentials
 credentials.json
+
+#Jupyter files
+*.ipynb

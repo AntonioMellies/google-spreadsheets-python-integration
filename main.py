@@ -2,6 +2,7 @@ import gspread
 import os
 import pandas as pd
 import settings
+import mail
 
 
 def main():
@@ -20,7 +21,13 @@ def main():
     worksheet = sh.sheet1
     df = pd.DataFrame(worksheet.get_all_records())
 
-    print(df)
+    # Filter dataframe
+    dfp = df.loc[df['Status (Responsável)'] == 'AJUSTADO']
+
+    count_pendency = dfp.shape[0]
+    print(f'Pendencias: {count_pendency}')
+    if count_pendency:
+        mail.sendNotification(df)
 
 
 if __name__ == "__main__":
